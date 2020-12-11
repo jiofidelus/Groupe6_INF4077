@@ -1,0 +1,27 @@
+GESTION DES UTILISATEURS
+    [] Page d'accueil
+    [] page d'inscription: Il faut que chaque nouvel utilisateur puisse s'inscrire dans la plateforme en ligne et mobile
+    [] Page de connexion: La connexion se fera grâce à un nom d'utilisateur et un mot de passe
+    [] Conception de la base de données
+    [] Création interface des patients
+    [] Création de l'interface pour les médecins
+    
+ENREGISTREMENT D'UN MALADE
+    [] Formulaire des symptomes
+    [] Camera et son à attacher au formulaire
+    [] GPS pour la géolocalisation des hopitaux à proximité
+    [] Implémentation des SMS
+    
+SUIVI DES PATIENTS
+    [] Envoi SMS de rendez-vous au patient
+    [] Envoie des résultats de test au patient
+    
+Statistique sur la maladie
+    [] Afficher les cas dans un tableau
+    [] Afficher les données sur un diagramme
+    [] Integrer une fonction de recherche
+    [] Delimitation des cas par zone
+    [] stats
+SENSIBILISATION
+  [] Espace sensibilisation
+  [] Envoi sms de sensibilisation
