@@ -1,0 +1,6 @@
+{
+    "/api": {
+      "target": "https://api.web2sms237.com/sms/send",
+      "secure": false
+    }
+  }

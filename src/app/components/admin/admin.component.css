@@ -1,0 +1,93 @@
+a.disabled {
+    /* Make the disabled links grayish*/
+    color: gray;
+    /* And disable the pointer events */
+    pointer-events: none;
+}
+.badge-pill{
+  border-radius: 50px;
+  margin-left: 10px;
+}
+.box-info.full {
+    padding: 0px;
+}
+.box-info:hover {
+    color: #393E48;
+}
+.box-info {
+    position: relative;
+    padding: 15px;
+    background: #fff;
+    color: #5b5b5b;
+    margin-bottom: 20px;
+    -webkit-transition: All 0.4s ease;
+    -moz-transition: All 0.4s ease;
+    -o-transition: All 0.4s ease;
+    background:#FFFFFF;
+    margin-top:20px;
+}
+.box-info .nav-tabs {
+    background: #1B1E24;
+}
+
+.box-info .nav-tabs  li.active  a, .box-info .nav-tabs  li.active  a:hover, .box-info .nav-tabs  li.active  a:focus {
+    cursor: default;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    background-color: #ffffff;
+    color: #1B1E24;
+}
+.col-md-5{
+    margin-bottom: 15px;
+}
+.card-header{
+    position: relative;
+}
+.card-header .custom-control{
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+li.media{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+.custom-control-input:focus ~  
+    .custom-control-label::before { 
+        /* when the button is toggled off  
+it is still in focus and a violet border will appear */ 
+        border-color: violet !important; 
+        /* box shadow is blue by default 
+but we do not want any shadow hence we have set  
+all the values as 0 */ 
+        box-shadow: 
+            0 0 0 0rem rgba(0, 0, 0, 0) !important; 
+    } 
+
+    /*sets the background color of 
+    switch to violet when it is checked*/ 
+    .custom-control-input:checked ~  
+    .custom-control-label::before { 
+        border-color: violet !important; 
+        background-color: violet !important; 
+    } 
+
+    /*sets the background color of 
+    switch to violet when it is active*/ 
+    .custom-control-input:active ~  
+    .custom-control-label::before { 
+        background-color: violet !important; 
+        border-color: violet !important; 
+    } 
+
+    /*sets the border color of switch 
+    to violet when it is not checked*/ 
+    .custom-control-input:focus: 
+    not(:checked) ~ .custom-control-label::before { 
+        border-color: violet !important; 
+    }

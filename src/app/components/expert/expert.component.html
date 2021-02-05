@@ -1,0 +1,93 @@
+
+<main id="main">
+        
+    <section class="contact" id="contact" style="margin-top: 72px;">
+        <div class="container" >
+
+            <div class="row">
+
+                <div class="col-md-2" style="margin-top: 60px;">
+
+                    <ul class="menu">
+                      <li title="Doctor"><a routerLink="/doctor" class="search">Doctor</a></li>
+                      <li title="Expert"><a routerLink="/expert" class="pencil active">Expert</a></li>
+                      <li title="Admin"><a routerLink="/admin" class="about">Admin</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="col-md-10">
+
+                    <section id="breadcrumbs" class="breadcrumbs" style="margin-top: 5px;height: 90px;">
+                        <div class="container">
+                
+                          <ol>
+                              <li>Home</li>
+                              <li>Medical Support</li>
+                              <li><a href="index.html">Send an Advice</a></li>
+                          </ol>
+                          <h2>Expert</h2>
+                        </div>
+                    </section>
+                    
+                
+                    <section class="inner-page" style="padding-top: 30px;">
+                        <div class="container">
+
+                          <div class="col-lg-9 mt-5 mt-lg-0 d-flex align-items-stretch">
+
+                            <form class="php-email-form offset-md-2"  #expertForm="ngForm" (ngSubmit)="submitData()">
+                             
+                              <div class="form-group">
+                                <label for="name">Sujet</label>
+                                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4"
+                                  data-msg="Please enter at least 8 chars of subject" [(ngModel)]="msg.subject"/>
+                                <div class="validate"></div>
+                              </div>
+                              <div class="form-group">
+                                <label for="name">Message</label>
+                                <textarea class="form-control" name="message" rows="5" data-rule="required"
+                                  data-msg="Please write something for us" [(ngModel)]="msg.content"></textarea>
+                                <div class="validate"></div>
+                              </div>
+
+                              <div class="form-row">
+                                
+                                <div class="form-group col-md-6">
+                                  <label for="name">Ajouter une note vocale</label><br>
+                                  <div class="container-fluid no-padding" style="padding-right: 0;padding-left: 0;padding-top: 5px;">
+                                    <div class="row">
+                                    <div class="col-md-3" >
+                                      <a class="get-started-btn green" (click)="initiateRecording()" *ngIf="!recording" style="cursor: pointer;background-color: green;color: white;">  Record </a>
+                                      <button class="get-started-btn red" (click)="stopRecording()" *ngIf="recording" style="cursor: pointer;background-color: red;color: white;"> Stop  </button>
+                                    </div>
+                                    <div class="col-md-6" style="padding-right: 0;padding-left: 0;">
+                                      <audio controls="" *ngIf="url" style="width: 220px; height: 40px;">
+                                      <source [src]="sanitize(url)" type="audio/wav">
+                                      </audio>
+                                    </div>
+                                  </div>
+                                </div>
+                                </div>
+                              </div>
+                              <div class="mb-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                              </div>
+
+                              <div class="text-center"><button type="submit">Sende Message</button></div>
+                            </form>
+                          </div>
+                        </div>
+                    </section>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main><!-- End #main -->

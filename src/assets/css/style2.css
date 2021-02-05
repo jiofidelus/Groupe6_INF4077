@@ -1,0 +1,73 @@
+.box{
+  margin-bottom: 40px;
+}.box p{
+  margin-bottom: 5px!important;
+  margin-left: 20px;
+  height: 25px;
+}
+.radiodecal{
+  margin-left: 20px;
+}
+.checkboxes {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  vertical-align: middle;
+  word-wrap: break-word;
+}
+.checkboxes input {
+  margin-right: 10px;
+}
+
+.fancy label {
+  display: inline-flex;
+  align-items: baseline;
+  /* margin-right: 10px; */
+  input[type="checkbox"],
+  input[type="radio"] {
+    position: relative;
+    appearance: none;
+    font-size: inherit;
+    width: 1em;
+    margin: 0;
+    color: inherit;
+    outline: none;
+    font-family: "Font Awesome 5 Pro";
+    transition: 300ms ease-out;
+
+    &::after {
+      content: "\f111"; // circle
+      display: inline-block;
+      text-align: center;
+      width: 1em;
+    }
+
+    &:checked::after {
+      font-weight: 900;
+    }
+    &:active {
+      transform: scale(0.6);
+    }
+
+    + span {
+      margin-left: 0.35em;
+    }
+  }
+
+  input[type="checkbox"]:checked::after {
+    content: "\f058"; // check-circle
+  }
+
+  input[type="radio"]:checked::after {
+    content: "\f192"; // dot-circle
+  }
+}
+
+.fancy.square label {
+  input[type="checkbox"]:after {
+    content: "\f0c8"; // square
+  }
+  input[type="checkbox"]:checked::after {
+    content: "\f14a"; // check-square
+  }
+}

@@ -1,0 +1,21 @@
+#mapid { height: 300px; }
+#my_camera{
+    width: 400px;
+    height: 240px;
+    border: 1px solid black;
+}
+#app {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+}
+#video {
+    background-color: #000000;
+}
+#canvas {
+    display: none;
+}
+li {
+    display: inline;
+    padding: 5px;
+}

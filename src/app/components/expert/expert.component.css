@@ -1,0 +1,15 @@
+a.get-started-btn{
+    margin-left:0;padding-left: 10px;padding-right: 10px;
+}
+a.green{
+    border-color: darkgreen;
+}
+a.red{
+    border-color: darkred;
+}
+a.disabled {
+    /* Make the disabled links grayish*/
+    color: gray;
+    /* And disable the pointer events */
+    pointer-events: none;
+}

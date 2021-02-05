@@ -1,0 +1,193 @@
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+          data-aos="fade-up" data-aos-delay="200">
+          <h1>Une Nouvelle Solution pour notre système</h1>
+          <h2>Systeme de détection et de surveillance des épidemies de choléra</h2>
+          <div class="d-lg-flex">
+            <a href="#about" class="btn-get-started scrollto">Signalez un cas suspect</a>
+            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video"
+              data-autoplay="true"> S'informer <i class="icofont-play-alt-2"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+<main id="main">
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Aidez Nous !</h2>
+                <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
+                    sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
+                    ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="col-md-12">
+                      <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                          <li data-filter="*" class="filter-active">Conseil</li>
+                          <li data-filter=".filter-card">Soins</li>
+                          <li data-filter=".filter-web">Plus</li>
+                      </ul>
+      
+                      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+      
+                          <div class="col-lg-12 col-md-6 portfolio-item filter-app">
+                              <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid"
+                                      alt=""></div>
+                              <div class="portfolio-info">
+                                  <h4>App 1</h4>
+                                  <p>App</p>
+                                  <!-- <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery"
+                                      class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+                                  <a href="portfolio-details.html" class="details-link" title="More Details"><i
+                                          class="bx bx-link"></i></a> -->
+                              </div>
+                          </div>
+
+                          
+      
+                      </div>
+                    </div>
+
+                    <div class="col-md-12" id="mapid"></div>
+
+                </div>
+
+                <div class="contact offset-md-1 col-md-7">
+
+                    <form class="php-email-form" #signalForm="ngForm" (ngSubmit)="sendSignal()">
+                        
+                        <div class="form-row">
+                          <h3>Informations Personnelles <br /><small>Quelques renseignements sur vous</small></h3>
+                          <div class="form-group col-md-6">
+                            <label for="name">Votre Nom</label>
+                            <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4"
+                              data-msg="Please enter at least 4 chars" [(ngModel)]="signal.nom"/>
+                            <div class="validate"></div>
+                          </div>
+                          
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="name">Numero Téléphone : </label>
+                            <input type="tel" class="form-control" name="email" id="email" 
+                              data-msg="Please enter a valid email" [(ngModel)]="signal.telephone"/>
+                            <div class="validate"></div>
+                          </div>
+                        </div>
+          
+                        <div class="box">
+                          <h3>Informations médicales <br /><small>le suspect présente-il ces symptomes ?</small></h3>
+                          
+                          <p>
+                            <label for="Milk" class="checkboxes">
+                              <input id="Milk" name="vomis" type="checkbox" value="vomis" [(ngModel)]="signal.vomis"/>
+                              <span>Vomissement reguliers</span>
+                            </label>
+                          </p>
+                    
+                          <p>
+                            <label for="Other" class="checkboxes">
+                              <input id="Other" name="diarhe" type="checkbox" value="fievre" [(ngModel)]="signal.fievre"/>
+                              <span>Fievres brulante</span>
+                            </label>
+                          </p>
+                          <p>
+                            <label for="Cookies" class="checkboxes">
+                              <input id="Cookies" name="fievre" type="checkbox" value="diarhe" [(ngModel)]="signal.diarhe"/>
+                              <span>Diarhéé liquidique</span>
+                            </label>
+                          </p>
+                          
+                        </div>
+
+                        <h3>S'agit-il de vous <br /><small>Etes-vous la personne qui presente ces symptomes ?</small></h3>
+                        <div class="form-check form-check-inline radiodecal">
+                          <input class="form-check-input" type="radio" name="soi" id="inlineRadio1" value="true" [(ngModel)]="signal.concerne">
+                          <label class="form-check-label" for="inlineRadio1">Oui</label>
+                        </div>
+                        <div class="form-check form-check-inline radiodecal">
+                          <input class="form-check-input" type="radio" name="soi" id="inlineRadio2" value="false" [(ngModel)]="signal.concerne">
+                          <label class="form-check-label" for="inlineRadio2">Non, il s'agit de quelqu'un d'autre</label>
+                        </div>
+                        
+                        <div class="mb-3">
+                          <div class="loading">Loading</div>
+                          <div class="error-message"></div>
+                          <div class="sent-message">Your message has been sent. Thank you!</div>
+                        </div>
+
+                        <a href="#" class="btn btn-outline btn-info" data-toggle="modal" data-target="#basicModal">ajouter image</a>
+
+                        <div class="text-center"><button type="submit">Send Message</button></div>
+                      </form>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Section -->
+
+</main><!-- End #main -->
+
+<!-- basic modal -->
+<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Faite des capture d'ecran</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="container">
+
+          <!-- <div class="row">
+            <div id="my_camera" class="col-md-12"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-12" style="padding: 10px;">
+              <button type="button" class="btn btn-info" onClick="take_snapshot()">Take Snapshot</button>
+            </div>
+          </div>
+          <div id="results" class="row webcam "></div> -->
+
+
+          <div id="app" class="contact">
+            <div><video #video id="video" width="400" height="400" autoplay></video></div>
+            <div><button id="snap" (click)="capture()">Snap Photo</button></div>
+            <canvas #canvas id="canvas" width="300" height="300"></canvas>
+            <ul>
+                <li *ngFor="let c of captures">
+                    <img src="{{ c }}" height="50" />
+                </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" onClick="reset()">Close</button>
+    </div>
+  </div>
+</div>
+<!-- basic modal -->

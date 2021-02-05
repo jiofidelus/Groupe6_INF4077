@@ -1,0 +1,339 @@
+<main id="main" >
+
+    <section class="contact" id="contact" style="margin-top: 72px;">
+        <div class="container" >
+
+            <div class="row">
+
+                <div class="col-md-2" style="margin-top: 60px;">
+
+                    <ul class="menu">
+                        <li title="Doctor"><a routerLink="/doctor" class="search">Doctor</a></li>
+                        <li title="Expert"><a routerLink="/expert" class="pencil">Expert</a></li>
+                        <li title="Admin"><a routerLink="/admin" class="active about">Admin</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="col-md-10">
+
+                    <section id="breadcrumbs" class="breadcrumbs" style="margin-top: 5px;height: 90px;">
+                        <div class="container">
+                
+                          <ol>
+                              <li>Home</li>
+                              <li><a href="index.html">Administration</a></li>
+                          </ol>
+                          <h2>Admin Page</h2>
+                        </div>
+                    </section>
+                    
+                
+                    <section class="inner-page" style="padding-top: 10px;">
+                     
+                        <div class="container">
+
+                          <div class="tabbed">
+
+                            <input type="radio" id="tab1" name="css-tabs" checked>
+                            <input type="radio" id="tab2" name="css-tabs">
+                            <input type="radio" id="tab3" name="css-tabs">
+                            <input type="radio" id="tab4" name="css-tabs">
+                            
+                            <ul class="tabs">
+                              <li class="tab"><label for="tab1">Messages<span class="badge badge-pill badge-primary">2</span></label></li>
+                              <li class="tab"><label for="tab2">Survey Mode</label></li>
+                              <li class="tab"><label for="tab3">Send Sms</label></li>
+                              <li class="tab"><label for="tab4">Statistics</label></li>
+                            </ul>
+  
+                            <div class="tab-content " style="height: 500px; overflow-y: scroll; overflow-x: hidden;">
+
+                              <ul class="list-unstyled">
+                                  <!-- <li *ngFor="let message of messages" [ngSwitch]="message.type"></li>
+                                  <ng-template ngSwitchCase="signal"></ng-template> -->
+
+                                <li class="media" *ngFor="let signal of signal2">
+                                  <img class="mr-3 rounded-circle" width="80px" height="80px" src="assets/img/patient.jpg" alt="Generic placeholder image">
+
+                                  <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Nouveaux cas suspect <small style="margin-left: 4px; color: grey;">{{signal.dateajout.toDate() | date:'dd/MM/yyyy'}}</small></h5>
+                                    
+                                    <div class="row" style="padding-left: 10px;">
+                                      <div class="col-md-6">
+                                        <span>Nom du patient : {{signal.nom}} </span>
+                                      </div>
+                                      <div class="col-md-6">
+                                        <span>Nbs symptomes : xx / 03</span>
+                                      </div>
+                                      <div class="col-md-6">
+                                        <span>Télephone: {{signal.telephone}}</span>
+                                      </div>
+                                      <div class="col-md-6">
+                                        <span>captures: </span>
+                                        <span style="margin-right: 1px;">1</span>
+                                        <i class="fas fa-image fa-1x" style="font-size:20px;margin-left: 5px;color:rgba(40, 58, 90, 0.9);" ></i>
+                                      </div>
+                                      <p class="col-md-12">
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+                                      </p>
+                                    </div>
+                                  </div>
+                                </li> 
+
+                                <li class="media" *ngFor="let messag of messags">
+                                  <img class="mr-3 img-fluid rounded-circle" width="80px" height="80px" src="assets/img/expert2.jpg" alt="Generic placeholder image">
+
+                                  <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Avis de l'expert - <span class="lead" style="margin-right: 5px;">Mr Draper</span>  <small class="text-muted" style="margin-left: 4px; color: grey;">{{messag.creationDate.toDate() | date:'dd/MM/yyyy'}}</small></h5>
+                                    <div class="row" style="padding-left: 10px;">
+                                      <p>
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus 
+                                      </p>
+                                      <audio controls style="height:35px;width:230px;margin-bottom:15px;">
+                                        <source ng-src="https://firebasestorage.googleapis.com/v0/b/episurvey-718fa.appspot.com/o/Epiaudios%2F1610619944603?alt=media&token=da332c87-473f-45a3-938f-b57d2ecec25e" type="audio/ogg">
+                                        <source ng-src="https://firebasestorage.googleapis.com/v0/b/episurvey-718fa.appspot.com/o/Epiaudios%2F1610619944603?alt=media&token=da332c87-473f-45a3-938f-b57d2ecec25e" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                      </audio>
+                                    </div>
+                                  </div>
+                                </li>
+                                
+                                <li class="media" *ngFor="let result of results">
+                                
+                                  <img class="mr-3 img-fluid rounded-circle" width="80px" height="80px" src="assets/img/doctor.jpg" alt="Generic placeholder image">
+                                  <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Resultat d'examen  <small style="margin-left: 4px; color: grey;">{{result.dateajout.toDate() | date:'dd/MM/yyyy'}}</small></h5>
+                                  
+                                    <div class="row" style="padding-left: 10px;">
+                                      <div class="col-md-6">
+                                        <span>Nom du patient : {{result.nom}}</span>
+                                      </div>
+                                      <div class="col-md-6">
+                                        <span>Symptomes Confirm: xx / 03</span>
+                                      </div>
+                                      <div class="col-md-6">
+                                        <span>Test : {{result.test}}</span>
+                                      </div>
+                                      <div class="col-md-6">
+                                        <span>Resultat du test : <strong>{{result.test_result}}</strong></span>
+                                      </div>
+                                        <p class="col-md-12">
+                                        <span>Observation du medecin : </span> {{result.observation}}
+                                      </p>
+                                    </div>
+                                  </div>                                                                  
+                                </li>
+
+                              </ul>
+                              
+                            </div>
+                            
+                            <div class="tab-content ">
+                              
+                              <div class="row">
+
+                                <div class="col-md-5" *ngFor="let mode of modes" [ngSwitch]="mode.id">
+
+                                  <ng-template ngSwitchCase="survey 1">
+                                    <div class="card text-center text-white">
+                                      <div class="card-header bg-light">
+                                        <h5 class="">{{mode.nom}}</h5>   
+                                        <div class="custom-control custom-switch">
+                                          <input type="checkbox" name="" [attr.checked]="mode.activate" class="custom-control-input" id="customSwitch1">
+                                          <label class="custom-control-label" for="customSwitch1"></label>
+                                        </div>                              
+                                      </div>
+                                      <div class="card-body" style="background-color: rgb(165, 175, 159);">
+                                        <h5 class="card-title">{{mode.phase}}</h5>
+                                        <p class="card-text">
+                                          {{mode.description}}
+                                        </p>
+                                        <a href="#" class="btn btn-light">Lire plus</a>
+                                      </div>
+                                    </div>
+                                  </ng-template>
+                                  <ng-template ngSwitchCase="survey 2">
+                                    <div class="card text-center text-white">
+                                      <div class="card-header bg-warning">
+                                        <h5 class="">{{mode.nom}}</h5>   
+                                        <div class="custom-control custom-switch">
+                                          <input type="checkbox" name="" [attr.checked]="mode.activate" class="custom-control-input" id="customSwitch1">
+                                          <label class="custom-control-label" for="customSwitch1"></label>
+                                        </div>                              
+                                      </div>
+                                      <div class="card-body" style="background-color: khaki;">
+                                        <h5 class="card-title">{{mode.phase}}</h5>
+                                        <p class="card-text">
+                                          {{mode.description}}
+                                        </p>
+                                        <a href="#" class="btn btn-warning">Lire plus</a>
+                                      </div>
+                                    </div>
+                                  </ng-template>
+                                  <ng-template ngSwitchCase="survey 3">
+                                    <div class="card text-center text-white">
+                                      <div class="card-header bg-danger">
+                                        <h5 class="">{{mode.nom}}</h5>   
+                                        <div class="custom-control custom-switch">
+                                          <input type="checkbox" name="" [attr.checked]="mode.activate" class="custom-control-input" id="customSwitch1">
+                                          <label class="custom-control-label" for="customSwitch1"></label>
+                                        </div>                              
+                                      </div>
+                                      <div class="card-body" style="background-color: rgb(202, 67, 49);">
+                                        <h5 class="card-title">{{mode.phase}}</h5>
+                                        <p class="card-text">
+                                          {{mode.description}}
+                                        </p>
+                                        <a href="#" class="btn btn-danger">Lire plus</a>
+                                      </div>
+                                    </div>
+                                  </ng-template>
+
+                                </div>
+
+                                <!--
+                                <div class="col-md-5">
+                                  <div class="card">
+                                    <div class="card-header">
+                                      <h5 class="">Mode de survey 1</h5>   
+                                      <div class="custom-control custom-switch">
+                                        <input type="checkbox" name="" class="custom-control-input" id="customSwitch2">
+                                        <label class="custom-control-label" for="customSwitch1"></label>
+                                      </div>                              
+                                    </div>
+                                    <div class="card-body">
+                                      <h5 class="card-title">Preconisé pour les debut de crise</h5>
+                                      <p class="card-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                      </p>
+                                      <a href="#" class="btn btn-primary">Lire plus</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                
+                                <div class="col-md-5">
+                                  <div class="card">
+                                    <div class="card-header">
+                                      <h5 class="">Mode de survey 1</h5>   
+                                      <div class="custom-control custom-switch">
+                                        <input type="checkbox" name="" class="custom-control-input" id="customSwitch3">
+                                        <label class="custom-control-label" for="customSwitch1"></label>
+                                      </div>                              
+                                    </div>
+                                    <div class="card-body">
+                                      <h5 class="card-title">Preconisé pour les debut de crise</h5>
+                                      <p class="card-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                      </p>
+                                      <a href="#" class="btn btn-primary">Lire plus</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                -->
+
+                              </div>
+
+                            </div>
+                            
+                            <div class="tab-content">
+                              <div class="offset-md-1"></div>
+                              <form class="php-email-form offset-md-1 col-md-8"  #smsform="ngForm" (ngSubmit)="sendMessage()">
+                                <div class="form-group">
+                                  <label for="name">Numéro du destinataire</label>
+                                  <input type="tel" class="form-control" name="tele" id="subject" data-rule="minlen:4"
+                                    data-msg="Please enter at least 8 chars of subject" [(ngModel)]="msg.num_destinataire"/>
+                                  <div class="validate"></div>
+                                </div>
+                                <div class="form-group">
+                                  <label for="name">Message</label>
+                                  <textarea class="form-control" name="messag" rows="4" data-rule="required"
+                                    data-msg="Please write something for us" [(ngModel)]="msg.message"></textarea>
+                                  <div class="validate"></div>
+                                </div>
+
+                                
+                                <div class="mb-3">
+                                  <div class="loading">Loading</div>
+                                  <div class="error-message"></div>
+                                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                                </div>
+
+                                <div class="text-center"><button type="submit">Send Message</button></div>
+                              </form>
+                            </div>
+
+                            <div class="tab-content">
+                              
+                              <!-- ======= About Us Section (stats) ======= -->
+                              <section id="about" class="about" style="padding: 5px 0; padding-top: 0px;">
+                                <div class="container" data-aos="fade-up">
+                                  <div class="row content">
+                                    <p>
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                    </p>
+                                    <div class="container">
+                                      <div class="row"  *ngFor="let stat of stats">
+                                        <div class="col-lg-5">
+                                        
+                                          <ul>
+                                            <li><i class="ri-check-double-line"></i> Nombre de nouveaux cas <span style="font-weight: bolder">{{stat.nouveau}}</span> </li>
+                                            <li><i class="ri-check-double-line"></i> Nombre de cas confirmés <span style="font-weight: bolder">{{stat.confirme}}</span> </li>
+                                          </ul>
+                                        </div>
+                                        <div class="col-lg-5 pt-4 pt-lg-0">
+                                          <ul>
+                                            <li><i class="ri-check-double-line"></i> Taux de virulence <span style="font-weight: bolder">{{stat.taux_contagion}}</span></li>
+                                            <li><i class="ri-check-double-line"></i> Nouveaux vaccins <span style="font-weight: bolder">{{stat.nouveaux_vaccin}}</span></li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                              </section><!-- End About Us Section -->
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                    </section>
+
+                    <!-- <form class="php-email-form"  #smsform="ngForm" (ngSubmit)="inform(smsform)">
+                      <h3>Envoyer un message</h3>
+                      <div class="form-group">
+                        <label for="name">Numeros du destinataire</label>
+                        <input type="tel" class="form-control" name="tele" id="subject" data-rule="minlen:4"
+                          data-msg="Please enter at least 8 chars of subject" ngModel/>
+                        <div class="validate"></div>
+                      </div>
+                      <div class="form-group">
+                        <label for="name">Message</label>
+                        <textarea class="form-control" name="messag" rows="4" data-rule="required"
+                          data-msg="Please write something for us" ngModel></textarea>
+                        <div class="validate"></div>
+                      </div>
+
+                      
+                      <div class="mb-3">
+                        <div class="loading">Loading</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                      </div>
+
+                      <div class="text-center"><button type="submit">Send Message</button></div>
+                    </form>
+ -->
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    
+    
+
+</main><!-- End #main -->

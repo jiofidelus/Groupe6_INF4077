@@ -1,0 +1,60 @@
+
+ <main id="main" >
+         <!-- ======= Why Us Section ======= -->
+        <section id="why-us" class="why-us section-bg" style="height: 100vh;">
+            <div class="container-fluid" data-aos="fade-up">
+    
+            <div class="row">
+
+                <div class="col-lg-5 align-items-stretch order-2 order-lg-1 img"
+                    style='background-image: url("assets/img/why-us.png");padding-left: 50px;' 
+                    data-aos="zoom-in" data-aos-delay="150">&nbsp;
+                </div>
+    
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-1 order-lg-2 ">
+        
+                    <div class="content">
+                        <h3>Nous créons <strong>un systeme de surveillance en temps reel</strong></h3>
+                        <p>
+                        Notre systeme permet la mise en place et l'activation des 03 modes de surveillance du cholera tels que
+                        Fixé par le <strong>WHO</strong>.
+                        </p>
+                    </div>
+                    
+                    <div class="col-lg-10 mt-5 mt-lg-0 d-flex align-items-stretch contact" 
+                        style="margin-left: 75px;">
+
+                        <form class="php-email-form" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+                                
+                            <div class="form-group">
+                                <label for="name">Email</label>
+                                <input type="email" class="form-control" name="mail" id="subject" data-rule="minlen:4"
+                                    data-msg="Please enter at least 8 chars of subject" ngModel/>
+                                <div class="validate"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Mot de Passe</label>
+                                <input type="password" class="form-control" name="password" id="subject" data-rule="minlen:4"
+                                    data-msg="Please enter at least 8 chars of subject" ngModel/>
+                                <div class="validate"></div>
+                            </div>
+
+                            
+                            <div class="mb-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                            </div>
+
+                            <div><button type="submit">Connectez vous!</button></div>
+                        </form>
+    
+                    </div>
+
+                </div>
+    
+            </div>
+    
+            </div>
+        </section><!-- End Why Us Section -->
+    </main><!-- End #main -->

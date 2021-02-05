@@ -1,0 +1,150 @@
+<main id="main">
+        
+    <section class="contact" id="contact" style="margin-top: 72px;">
+        <div class="container" >
+
+            <div class="row">
+
+                <div class="col-md-2" style="margin-top: 60px;">
+
+                    <ul class="menu">
+                        <li title="Doctor"><a routerLink="/doctor" class="search active">Doctor</a></li>
+                        <li title="Expert"><a routerLink="/expert" class="pencil">Expert</a></li>
+                        <li title="Admin"><a routerLink="/admin" class="about">Admin</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="col-md-10">
+
+                    <section id="breadcrumbs" class="breadcrumbs" style="margin-top: 5px;height: 90px;">
+                        <div class="container">
+                
+                          <ol>
+                              <li>Home</li>
+                              <li>Medical Support</li>
+                              <li><a href="index.html">Record Test Result</a></li>
+                          </ol>
+                          <h2>Doctor </h2>
+                        </div>
+                    </section>
+                    
+                
+                    <section class="inner-page contact" style="padding-top: 30px;">
+                        <div class="container">
+
+                          <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
+                            <form class="php-email-form" #examForm="ngForm" (ngSubmit)="sendResult()">
+
+                              <div class="form-row">
+                                <div class="form-group col-md-6">
+                                  <label for="name">Nom</label>
+                                  <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4"
+                                    data-msg="Please enter at least 4 chars" [(ngModel)]="res.nom"/>
+                                  <div class="validate"></div>
+                                </div>
+                                <div class="form-group col-md-4">
+                                  <label for="sex">Sexe</label>
+                                  <input type="text" class="form-control" name="sex" id="sex" data-rule="email"
+                                    data-msg="Please enter a valid email" [(ngModel)]="res.sexe"/>
+                                  <div class="validate"></div>
+                                </div>
+                                <div class="form-group col-md-2">
+                                  <label for="name">Age</label>
+                                  <input type="number" class="form-control" name="age" id="email" data-rule="email"
+                                    data-msg="Please enter a valid email" [(ngModel)]="res.age"/>
+                                  <div class="validate"></div>
+                                </div>
+                              </div>
+                              <div class="form-row">
+                                <div class="form-group col-md-5 ">
+                                  <label for="name">Date apparition des symptomes</label>
+                                  <input type="date" class="form-control" name="sympdat" id="subject" data-rule="minlen:4"
+                                    data-msg="Please enter at least 8 chars of subject" [(ngModel)]="res.symptomDate"/>
+                                  <div class="validate"></div>
+                                </div>
+                                <div class="form-group offset-md-1 col-md-5 ">
+                                  <label for="name">Date d'analyse</label>
+                                  <input type="date" class="form-control" name="analydat" id="subject" data-rule="minlen:4"
+                                    data-msg="Please enter at least 8 chars of subject" [(ngModel)]="res.examDate"/>
+                                  <div class="validate"></div>
+                                </div>
+                              </div>
+
+                              
+                                <div class="box">
+
+                                  <h4>Informations médicales</h4>
+
+                                  <div style="padding-left: 15px;">
+                                    <h4><small>Symptomes confirmés</small></h4>
+                                    <p>
+                                      <label for="Milk" class="checkboxes">
+                                        <input id="Milk" name="vomis" type="checkbox" value="vomis" [(ngModel)]="res.vomis"/>
+                                        <span>Vomissement reguliers</span>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label for="Other" class="checkboxes">
+                                        <input id="Other" name="diarhe" type="checkbox" value="fievre" [(ngModel)]="res.fievre"/>
+                                        <span>Fievres brulante</span>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label for="Cookies" class="checkboxes">
+                                        <input id="Cookies" name="fievre" type="checkbox" value="diarhe" [(ngModel)]="res.diarhe"/>
+                                        <span>Diarhéé liquidique</span>
+                                      </label>
+                                    </p>
+                                  </div>
+                                  
+                                
+                                  <div class="box" style="padding-left: 15px;">
+                                    <h4 style="margin-top: 20px;"><small>Type de test</small></h4>
+                                    <div class="form-check form-check-inline radiodecal">
+                                      <input class="form-check-input" type="radio" name="examtest" id="inlineRadio1" value="Alcoolemie" [(ngModel)]="res.test">
+                                      <label class="form-check-label" for="inlineRadio1">Alcoolemie</label>
+                                    </div>
+                                    <div class="form-check form-check-inline radiodecal">
+                                      <input class="form-check-input" type="radio" name="examtest" id="inlineRadio2" value="Naso obstrical" [(ngModel)]="res.test">
+                                      <label class="form-check-label" for="inlineRadio2">Naso obstrical</label>
+                                    </div>
+
+                                    <h4><small>Résultat du test</small></h4>
+                                    <div class="form-check form-check-inline radiodecal">
+                                      <input class="form-check-input" type="radio" name="examres" id="inlineRadio11" value="Positiif" [(ngModel)]="res.test_result">
+                                      <label class="form-check-label" for="inlineRadio11">Positif</label>
+                                    </div>
+                                    <div class="form-check form-check-inline radiodecal">
+                                      <input class="form-check-input" type="radio" name="examres" id="inlineRadio22" value="Négatif" [(ngModel)]="res.test_result">
+                                      <label class="form-check-label" for="inlineRadio22">Négatif</label>
+                                    </div>
+                                    <div class="form-group">
+                                      <h4><small><label for="obs">Observation du medecin</label></small></h4>
+                                      <textarea class="form-control" name="message" rows="5" cols="6" data-rule="required"data-msg="Please write something for us" id="obs" [(ngModel)]="res.observation"></textarea>
+                                      <div class="validate"></div>
+                                    </div>
+                                </div>
+                                                           
+                                </div>
+                              
+                              <div class="mb-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                              </div>
+                              <div class="text-center"><button type="submit">Send Message</button></div>
+                            </form>
+                          </div>
+                        </div>
+                    </section>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main><!-- End #main -->
