@@ -28,7 +28,7 @@ export class SignalComponent implements OnInit {
   signal : Signalment = 
   { nom:'',telephone:'',imageurl:'',
     diarhe:false,vomis:false,fievre:false,
-    concerne:false,dateajout: new Date()
+    concerne:false,dateajout: new Date(), nbsymtom:0
   };
 
   constructor(private http: HttpClient, private storage: AngularFireStorage,private msServive : MessagService) { }
@@ -40,7 +40,7 @@ export class SignalComponent implements OnInit {
     }
     navigator.geolocation.getCurrentPosition((position)=>{
       const coords = position.coords;
-      const LatLong = [coords.longitude, coords.latitude];
+      const LatLong = [coords.latitude, coords.longitude];
       console.log(`lat: ${position.coords.latitude}, long: ${position.coords.longitude}`);
       var mymap = L.map('mapid').setView(LatLong, 13);
       
@@ -107,6 +107,15 @@ export class SignalComponent implements OnInit {
 
   sendSignal(){
     var n = Date.now();
+    if(this.signal.fievre == true){
+      this.signal.nbsymtom = this.signal.nbsymtom + 1;
+    }
+    if(this.signal.vomis == true){
+      this.signal.nbsymtom = this.signal.nbsymtom + 1;
+    }
+    if(this.signal.diarhe == true){
+      this.signal.nbsymtom = this.signal.nbsymtom + 1;
+    }
     console.log(this.signal);
 
     const filePath = `uploads/`;

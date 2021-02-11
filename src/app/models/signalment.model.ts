@@ -5,6 +5,7 @@ export class Signalment {
     vomis : boolean;
     diarhe : boolean;
     fievre : boolean;
+    nbsymtom:number;
     concerne :  boolean;
     dateajout : Date;
 }

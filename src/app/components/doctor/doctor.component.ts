@@ -14,7 +14,7 @@ export class DoctorComponent implements OnInit {
   { nom:'',sexe:'',age:0,
     symptomDate:new Date(),examDate:new Date(),
     diarhe:false,vomis:false,fievre:false,
-    test:"",test_result:"",observation:"",dateajout: new Date()
+    test:"",test_result:"",observation:"",dateajout: new Date(), nbsymtom:0
   }
 
   constructor(private router: Router, private msgService : MessagService) { }
@@ -29,6 +29,15 @@ export class DoctorComponent implements OnInit {
 
   sendResult(){
     console.log(this.res);
+    if(this.res.fievre == true){
+      this.res.nbsymtom = this.res.nbsymtom + 1;
+    }
+    if(this.res.vomis == true){
+      this.res.nbsymtom = this.res.nbsymtom + 1;
+    }
+    if(this.res.diarhe == true){
+      this.res.nbsymtom = this.res.nbsymtom + 1;
+    }
     this.msgService.createResult(this.res);
   }
 

@@ -45,7 +45,7 @@ export class AdminComponent implements OnInit {
     symptomDate: new Date(), examDate: new Date(),
     diarhe:false, vomis:false, fievre:false,
     test:'', test_result:'', observation:'',
-    dateajout: new Date()
+    dateajout: new Date(), nbsymtom:0
   };
 
   text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, ipsum officia voluptatum iusto inventore hic non fugiat quam consectetur dignissimos cumque minus, sunt a quia! Saepe nulla soluta recusandae odit!";

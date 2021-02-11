@@ -64,7 +64,7 @@
                                         <span>Nom du patient : {{signal.nom}} </span>
                                       </div>
                                       <div class="col-md-6">
-                                        <span>Nbs symptomes : xx / 03</span>
+                                        <span>Nbs symptomes : {{signal.nbsymtom}} / 03</span>
                                       </div>
                                       <div class="col-md-6">
                                         <span>Télephone: {{signal.telephone}}</span>
@@ -85,16 +85,11 @@
                                   <img class="mr-3 img-fluid rounded-circle" width="80px" height="80px" src="assets/img/expert2.jpg" alt="Generic placeholder image">
 
                                   <div class="media-body">
-                                    <h5 class="mt-0 mb-1">Avis de l'expert - <span class="lead" style="margin-right: 5px;">Mr Draper</span>  <small class="text-muted" style="margin-left: 4px; color: grey;">{{messag.creationDate.toDate() | date:'dd/MM/yyyy'}}</small></h5>
+                                    <h5 class="mt-0 mb-1">Avis de l'expert - <span class="head" style="margin-right: 5px;">{{messag.expert}}</span>  <small class="text-muted" style="margin-left: 4px; color: grey;">{{messag.creationDate.toDate() | date:'dd/MM/yyyy'}}</small></h5>
                                     <div class="row" style="padding-left: 10px;">
                                       <p>
                                         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus 
                                       </p>
-                                      <audio controls style="height:35px;width:230px;margin-bottom:15px;">
-                                        <source ng-src="https://firebasestorage.googleapis.com/v0/b/episurvey-718fa.appspot.com/o/Epiaudios%2F1610619944603?alt=media&token=da332c87-473f-45a3-938f-b57d2ecec25e" type="audio/ogg">
-                                        <source ng-src="https://firebasestorage.googleapis.com/v0/b/episurvey-718fa.appspot.com/o/Epiaudios%2F1610619944603?alt=media&token=da332c87-473f-45a3-938f-b57d2ecec25e" type="audio/mpeg">
-                                        Your browser does not support the audio element.
-                                      </audio>
                                     </div>
                                   </div>
                                 </li>
@@ -110,7 +105,7 @@
                                         <span>Nom du patient : {{result.nom}}</span>
                                       </div>
                                       <div class="col-md-6">
-                                        <span>Symptomes Confirm: xx / 03</span>
+                                        <span>Symptomes Confirm: {{result.nbsymtom}} / 03</span>
                                       </div>
                                       <div class="col-md-6">
                                         <span>Test : {{result.test}}</span>

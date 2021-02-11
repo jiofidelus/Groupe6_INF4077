@@ -7,6 +7,7 @@ export class ExamResult {
 	vomis : boolean;
     diarhe : boolean;
     fievre : boolean;
+	nbsymtom: number;
     test: string;
     test_result: string;
 	observation:string;

@@ -23,7 +23,7 @@ export class ExpertComponent implements OnInit {
   title = 'micRecorder';
   fb;
   now = Date.now();
-  msg:Messag = {subject:"", content:"", creationDate: new Date(), audiourl:""};
+  msg:Messag = {expert: "Gwen Larochelle", subject:"", content:"", creationDate: new Date(), audiourl:""};
   audio:Blob;
   downloadURL: Observable<string>;
 
