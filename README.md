@@ -8,7 +8,7 @@ Exécution des applications:
 
 1- Application web
 
--Outils de dévolloppement utilisés:
+-Outils de dévoloppement utilisés:
 L'app a été faite avec angular et firebase
 
 -Lancer l'app avec la fonction "ng serve'' puis aller dans le navigateur.
