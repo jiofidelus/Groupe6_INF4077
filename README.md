@@ -14,7 +14,9 @@ L'app a été faite avec angular et firebase
 -Lancer l'app avec la fonction "ng serve'' puis aller dans le navigateur.
 
 Puis une fois dans l'app il y a les parties suivantes:
+
 -La partie 'signal' pour le signalement d'un cas
+
 -Et la partie Admin où il y'a deux types d'admin : le médécin et l'expert qui effectuent tous deux des tâches particulières
 
 2- L'application native
