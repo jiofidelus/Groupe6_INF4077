@@ -1,7 +1,7 @@
 # Groupe6_INF4077
 
 Notre  projet de développement d'une application de surveillance épidémiologique se décompose en Deux branches:
-- La branche Maste: qui contient l'app web et les apk natives et cross
+- La branche Master: qui contient l'app web et les apk native et cross
 - La branche devops qui contient un projet que nous avons build avec devops
 
 Exécution des applications:
@@ -25,7 +25,7 @@ Comment la tester ?
 
 Elle est divisée en 3 parties: 
 -Home:
--Signalement d'un cas: Om nous avons un formulaire qui enregistre les cas dans la bd SqlLite, après avoir rempli le formualaire on le valide sur le bouton "soumettre".
+-Signalement d'un cas: où nous avons un formulaire qui enregistre les cas dans la bd SqlLite, après avoir rempli le formualaire on le valide sur le bouton "soumettre".
 Puis, à côté, un patient peut prendre une photo qui est stockée en local, et voir sa position actuelle sur la carte google map. 
 Comment utiliser la géolocalisation ?
 Après le clic sur le bouton "GPS", la carte est chargée et la position trouvée. Puis, cliquer sur l'endroid localisé par google pour que les coordonnées cartographiques s'affichent
